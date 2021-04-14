@@ -7,7 +7,7 @@
           <el-tab-pane label="KEYSTORE">
             <keystore-tab />
           </el-tab-pane>
-          <el-tab-pane label="NMENOMIC">
+          <el-tab-pane label="MNEMONIC">
             <mnemonic-tab />
           </el-tab-pane>
           <el-tab-pane label="PRIVATE KEY">
@@ -21,7 +21,7 @@
     </div>
   </div>
 </template>
-
+https://mywalletconnect-dapp.com/
 <script>
 import PrivateTab from "@/components/Private";
 import MnemonicTab from "@/components/Mnemonic";
