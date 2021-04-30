@@ -11,7 +11,7 @@ const routes = [
     component: Home
   },
   {
-    path: "/import-wallets",
+    path: "/import-wallets/:name",
     name: "import",
     component: () => import("@/views/Import.vue")
   },

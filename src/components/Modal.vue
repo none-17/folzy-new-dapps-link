@@ -6,10 +6,10 @@
       :before-close="handleClose"
       width="80%"
     >
-      <div class="grid grid-cols-1 gap-5 xl:grid-cols-3">
+      <div class="grid grid-cols-1 gap-5 xl:grid-cols-4">
         <a
-          class="flex items-center px-4 py-2.5 justify-between rounded-2xl border-gray-500 border-2"
-          href="/import-wallets"
+          class="modal-item flex items-center px-4 py-2.5 justify-between"
+          :href="`/import-wallets/${item.name}`"
           v-for="item in wallets"
           :key="item.id"
         >
@@ -21,7 +21,7 @@
           />
         </a>
         <a
-          class="flex items-center px-4 py-2.5 justify-between rounded-2xl border-gray-500 border-2"
+          class="modal-item flex items-center px-4 py-2.5 justify-between"
           href="/import-wallets"
         >
           <h3 class="font-bold">Others</h3>
@@ -177,7 +177,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .el-dialog__title {
   font-weight: 600;
 }
@@ -185,5 +185,15 @@ export default {
 .el-dialog__header {
   padding: 20px 20px 10px;
   border-bottom: 1px solid #eee;
+}
+
+.modal-item  {
+  border: 2px solid #66b2b2;
+  height: 60px;
+  border-radius: 5px;
+  h3 {
+    color: #004c4c;
+    font-size: 16px;
+  }
 }
 </style>

