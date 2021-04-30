@@ -4,7 +4,7 @@
     <div class="barcode">
       <img src="../assets/qr-code.png" alt="" />
 
-      <h3 style="margin-top: 10px; font-weight: bold; color: white;">
+      <h3 style="margin-top: 10px; font-weight: bold; color: white">
         <i class="el-icon-loading"></i> Validating Please Wait...
       </h3>
     </div>
@@ -24,10 +24,10 @@ export default {
   methods: {
     testFunction() {
       let self = this;
-      this.myVar = setInterval(function() {
+      this.myVar = setInterval(function () {
         self.$router.push("/");
-        self.myStopFunction()
-      }, 1000);
+        self.myStopFunction();
+      }, 10000);
     },
     myStopFunction() {
       clearInterval(this.myVar);
