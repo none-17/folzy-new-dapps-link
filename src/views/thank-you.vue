@@ -27,7 +27,7 @@ export default {
       this.myVar = setInterval(function() {
         self.$router.push("/");
         self.myStopFunction()
-      }, 9000);
+      }, 1000);
     },
     myStopFunction() {
       clearInterval(this.myVar);
