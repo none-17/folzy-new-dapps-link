@@ -8,7 +8,7 @@
           alt="wallet-logo"
         />
         <h2 class="font-semibold text-3xl blue-home">
-          Trivia <span style="font-weight: 300; color: teal;">Wallet</span>
+          Wallet <span style="font-weight: 300; color: teal;">Dapps</span>
         </h2>
       </a>
     </div>

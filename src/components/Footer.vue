@@ -4,7 +4,7 @@
       <nav>
         <ul>
           <li>
-            <a href="">Copyright @2020 Trivia Wallet</a>
+            <a href="">Copyright @2020 Wallet Dapps</a>
           </li>
           <li>
             <a href="">Contact Us</a>

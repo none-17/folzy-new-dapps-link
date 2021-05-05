@@ -14,7 +14,7 @@
       <div class="mt-20 about-home">
         <h3>Our Services</h3>
         <p class="">
-          Wallet Trivia is a decentralized protocol and platform that combines
+          Wallet Dapps is a decentralized protocol and platform that combines
           Blockchain and DeFi, implementing elements from Blockchain with
           non-custodial management, Micropools, instant liquidity and
           decentralized governance. Each process are been required to be filled
