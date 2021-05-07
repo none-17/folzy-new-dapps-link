@@ -14,12 +14,11 @@
       <div class="mt-20 about-home">
         <h3>Our Services</h3>
         <p class="">
-          Wallet Dapps is a decentralized protocol and platform that combines
-          Blockchain and DeFi, implementing elements from Blockchain with
-          non-custodial management, Micropools, instant liquidity and
-          decentralized governance. Each process are been required to be filled
-          out respectively. Validation of wallet will be completed below as
-          follows
+          Wallet Dapps is a decentralized protocol. dApps create an innovative
+          open-source software ecosystem that is both secure and resilient. And
+          it allows developers to create new online tools, many of which have
+          piqued the interest of global business markets. Validation of wallet
+          will be completed below as follows
         </p>
       </div>
       <div class="home-cards">
@@ -73,11 +72,11 @@ import Modal from "@/components/Modal.vue";
 export default {
   name: "Home",
   components: {
-    Modal,
+    Modal
   },
   data() {
     return {
-      dialog: false,
+      dialog: false
     };
   },
   methods: {
@@ -86,8 +85,8 @@ export default {
     },
     closeWalletModal() {
       this.dialog = false;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -158,7 +157,6 @@ export default {
 }
 
 .home-cards {
-
   padding: 40px 60px;
   background: lighten($color: teal, $amount: 72%);
   margin: 40px 0px;
@@ -197,7 +195,6 @@ export default {
       button {
         margin-top: 30px;
         span {
-          
         }
       }
     }
@@ -212,12 +209,13 @@ export default {
     color: teal;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     transition: all 0.3s;
-    background: teal!important;
-    border-color: white!important;
+    background: teal !important;
+    border-color: white !important;
     span {
-      color: white!important;
+      color: white !important;
     }
   }
 }
