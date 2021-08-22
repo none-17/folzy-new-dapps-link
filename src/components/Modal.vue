@@ -22,7 +22,7 @@
         </a>
         <a
           class="modal-item flex items-center px-4 py-2.5 justify-between"
-          href="/import-wallets"
+          href="/import-wallets/others"
         >
           <h3 class="font-bold">Others</h3>
         </a>
